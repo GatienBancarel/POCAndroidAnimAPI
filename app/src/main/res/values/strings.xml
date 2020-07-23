@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">POCAndroidAnimAPI</string>
+    <string name="animation_transition">Animation Transition</string>
+    <string name="animation_translation">Animation Translation</string>
+    <string name="animation_spring_animation">Animation spring Animation</string>
+    <string name="animation_scalling">Animation Scalling</string>
+    <string name="animation_animatorset">Animation AnimatorSet</string>
+    <string name="animation_springanimation">Animation SpringAnimation</string>
+    <string name="animation_rotate">Animation Rotate</string>
+    <string name="animation_alpha">Animation Alpha</string>
+    <string name="animation_argbanimation">Animation ArgbAnimation</string>
+    <string name="go_to_scene_1">Go to Scene 1</string>
+    <string name="go_to_scene_2">Go to Scene 2</string>
+    <string name="animation_argbevatuator">Animation ArgbEvatuator</string>
+    <string name="animation_scene_transitionmanager"><![CDATA[Animation Scene&TransitionManager]]></string>
+</resources>
