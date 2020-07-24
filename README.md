@@ -1,6 +1,6 @@
-# Android Example Application
+# POC Animation Android
 
-This is an example Android Application README to show briefly the sections your app README should contain.
+Dans ce projet j'explore plusieurs API d'animations.
 
 ## Installation
 Clone this repository and import into **Android Studio**
