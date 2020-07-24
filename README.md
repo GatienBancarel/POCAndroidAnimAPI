@@ -6,10 +6,38 @@ Dans ce projet j'explore plusieurs API d'animations.
 
 <img src="app/src/main/res/drawable-v24/screenshot/110819196_316542972863257_8971258900736702698_n.jpg" width="300"/>
 
-Clone this repository and import into **Android Studio**
-```bash
-git clone git@github.com:wolox/<reponame>.git
+##Translation
+
+<img src="app/src/main/res/drawable-v24/screenshot/translation.PNG" width="300"/>
+
+Cette animation va animer notre objet de 1000dp vers le haut avec une durée de 2000ms
+Pour cela il existe plusieurs méthode.
+
+Méthode 1 (API AnimationsUtils):
+
+Pour cela on définit l'animation dans un fichier xml
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromXDelta="0"
+        android:toXDelta="0"
+        android:fromYDelta="0"
+        android:toYDelta="-1000"
+        android:duration="2000" />
+</set>
 ```
+
+Puis on appel cette animation dans notre activity
+```kotlin
+viewTranslation.startAnimation(AnimationUtils.loadAnimation(this,R.anim.translation))
+```
+
+Méthode 2 (API ObjectAnimator):
+```kotlin
+ObjectAnimator.ofFloat(viewTranslation, "translationY", -1000f).setDuration(2000).start()
+```
+
 
 ## Configuration
 ### Keystores:
