@@ -20,7 +20,6 @@ class ActivitySceneTransitionManager : AppCompatActivity() {
         sceneRoot = findViewById(R.id.scene_root)
         scene1 = Scene.getSceneForLayout(sceneRoot, R.layout.scene1, this)
         scene2 = Scene.getSceneForLayout(sceneRoot, R.layout.scene2, this)
-        scene1.enter()
     }
 
     fun scene1TransitionManager(view: View) {

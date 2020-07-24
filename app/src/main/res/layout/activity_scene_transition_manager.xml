@@ -45,7 +45,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goScene2">
-        <include layout="@layout/scene1" />
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
