@@ -4,7 +4,7 @@ Dans ce projet j'explore plusieurs API d'animations.
 
 ## Home Page
 
-<img src="app/src/main/res/drawable-v24/screenshot/110819196_316542972863257_8971258900736702698_n.jpg"/>
+<img src="app/src/main/res/drawable-v24/screenshot/110819196_316542972863257_8971258900736702698_n.jpg" width="300"/>
 
 Clone this repository and import into **Android Studio**
 ```bash
