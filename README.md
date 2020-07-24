@@ -122,7 +122,7 @@ AnimatorSet().apply {
 
 Cette animation va nous permettre de faire faire une rotation à notre objet. Pour cela encore une fois 2 méthodes
 
-# Méthode 1 (API AnimationsUtils):
+### Méthode 1 (API AnimationsUtils):
 
 On définit l'animation dans un fichier xml
 ```xml
@@ -143,7 +143,7 @@ Puis on appel cette animation dans notre activity
 viewRotate.startAnimation(AnimationUtils.loadAnimation(this,R.anim.rotate))
 ```
 
-# Méthode 2 (API ObjectAnimator):
+### Méthode 2 (API ObjectAnimator):
 ```kotlin
 ObjectAnimator.ofFloat(viewRotate, "rotation", 0f, 360f).setDuration(2000).start()
 ```
