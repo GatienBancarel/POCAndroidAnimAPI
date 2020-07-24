@@ -13,7 +13,7 @@ Dans ce projet j'explore plusieurs API d'animations.
 Cette animation va animer notre objet de 1000dp vers le haut avec une durée de 2000ms.
 Pour cela il existe plusieurs méthode.
 
-# Méthode 1 (API AnimationsUtils):
+### Méthode 1 (API AnimationsUtils):
 
 On définit l'animation dans un fichier xml
 ```xml
@@ -33,7 +33,7 @@ Puis on appel cette animation dans notre activity
 viewTranslation.startAnimation(AnimationUtils.loadAnimation(this,R.anim.translation))
 ```
 
-# Méthode 2 (API ObjectAnimator):
+### Méthode 2 (API ObjectAnimator):
 ```kotlin
 ObjectAnimator.ofFloat(viewTranslation, "translationY", -1000f).setDuration(2000).start()
 ```
@@ -67,7 +67,7 @@ val springAnim = findViewById<View>(R.id.viewSpringAnimation).let { img ->
 
 ## Scalling
 
-<img src="app/src/main/res/drawable-v24/screenshot/110637672_213407529971882_8474870351134009319_n.png" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/110637672_213407529971882_8474870351134009319_n.jpg" width="300"/>
 
 Cette animation va permettre de doubler la taille de notre objet. Comme pour la translation j'ai défini l'animation dans un fichier xml
 ```xml
@@ -91,11 +91,11 @@ viewScalling.startAnimation(AnimationUtils.loadAnimation(this,R.anim.scalling))
 
 ## AnimatorSet
 
-<img src="app/src/main/res/drawable-v24/screenshot/110176795_2713567488964911_5875636142801842277_n.png" width="300"/>
-<img src="app/src/main/res/drawable-v24/screenshot/115699253_319973892473163_2556289503347121058_n.png" width="300"/>
-<img src="app/src/main/res/drawable-v24/screenshot/115804811_761488911321449_1125701046003024491_n.png" width="300"/>
-<img src="app/src/main/res/drawable-v24/screenshot/110324484_1225288894504021_2475116368226660180_n.png" width="300"/>
-<img src="app/src/main/res/drawable-v24/screenshot/110176795_2713567488964911_5875636142801842277_n.png" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/110176795_2713567488964911_5875636142801842277_n.jpg" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/115699253_319973892473163_2556289503347121058_n.jpg" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/115804811_761488911321449_1125701046003024491_n.jpg" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/110324484_1225288894504021_2475116368226660180_n.jpg" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/110176795_2713567488964911_5875636142801842277_n.jpg" width="300"/>
 
 Grâce l'API AnimatorSet nous allons pouvoir définir un enchainement d'animation dans un ordre prédéfini
 ```kotlin
@@ -117,6 +117,8 @@ AnimatorSet().apply {
 ```
 
 ## Rotate
+
+<img src="app/src/main/res/drawable-v24/screenshot/109706739_297204934702059_255916035530628256_n.jpg" width="300"/>
 
 Cette animation va nous permettre de faire faire une rotation à notre objet. Pour cela encore une fois 2 méthodes
 
@@ -148,7 +150,7 @@ ObjectAnimator.ofFloat(viewRotate, "rotation", 0f, 360f).setDuration(2000).start
 
 ## Alpha
 
-<img src="app/src/main/res/drawable-v24/screenshot/111624866_2719448218315626_2900539307466714529_n.png" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/111624866_2719448218315626_2900539307466714529_n.jpg" width="300"/>
 
 Cette animation va nous permettre de faire disparaitre notre objet en modifiant son opacité
 
@@ -172,9 +174,9 @@ Remarque: Il est probablement possible d'effectuer cette animation avec l'API Ob
 
 ## ArgbEvaluator
 
-<img src="app/src/main/res/drawable-v24/screenshot/113393778_981100625655218_1723919606023016081_n.png" width="300"/>
-<img src="app/src/main/res/drawable-v24/screenshot/114608460_311334880049317_5064564071399258696_n.png" width="300"/>
-<img src="app/src/main/res/drawable-v24/screenshot/112359236_281900056246400_1797260508757508773_n.png" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/113393778_981100625655218_1723919606023016081_n.jpg" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/114608460_311334880049317_5064564071399258696_n.jpg" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/112359236_281900056246400_1797260508757508773_n.jpg" width="300"/>
 
 L'API ArgbEvaluator va permettre l'interpolation entre deux couleurs
 ```kotlin
@@ -205,9 +207,9 @@ class ActivityArgbEvaluator : AppCompatActivity() {
 
 ## Scene&TransitionManager
 
-<img src="app/src/main/res/drawable-v24/screenshot/115688014_332333307930455_3584244512574828998_n.png" width="300"/>
-<img src="app/src/main/res/drawable-v24/screenshot/111114944_2806584562932104_1735276072698083501_n.png" width="300"/>
-<img src="app/src/main/res/drawable-v24/screenshot/110319847_582056199337906_8549106073530457618_n.png" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/115688014_332333307930455_3584244512574828998_n.jpg" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/111114944_2806584562932104_1735276072698083501_n.jpg" width="300"/>
+<img src="app/src/main/res/drawable-v24/screenshot/110319847_582056199337906_8549106073530457618_n.jpg" width="300"/>
 
 L'API transition manager va nous permettre de switcher entre plusieurs scenes.
 Dans notre fichier xml définissant la vue de notre activity, on inclu une FrameLayout ayant pour id scene_root.
