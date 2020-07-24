@@ -6,16 +6,16 @@ Dans ce projet j'explore plusieurs API d'animations.
 
 <img src="app/src/main/res/drawable-v24/screenshot/110819196_316542972863257_8971258900736702698_n.jpg" width="300"/>
 
-##Translation
+## Translation
 
 <img src="app/src/main/res/drawable-v24/screenshot/translation.PNG" width="300"/>
 
-Cette animation va animer notre objet de 1000dp vers le haut avec une durée de 2000ms
+Cette animation va animer notre objet de 1000dp vers le haut avec une durée de 2000ms.
 Pour cela il existe plusieurs méthode.
 
 Méthode 1 (API AnimationsUtils):
 
-Pour cela on définit l'animation dans un fichier xml
+On définit l'animation dans un fichier xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
@@ -38,6 +38,32 @@ Méthode 2 (API ObjectAnimator):
 ObjectAnimator.ofFloat(viewTranslation, "translationY", -1000f).setDuration(2000).start()
 ```
 
+## SpringAnimation
+
+<img src="app/src/main/res/drawable-v24/screenshot/springAnimation.PNG" width="300"/>
+
+Cette animation va faire faire 3 petits rebond à notre objet.
+
+Pour cela ajoutez tout d'abord cette librairie dans vos dépendances gradle:
+```gradle
+dependencies {
+    def dynamicanimation_version = '1.0.0'
+    implementation "androidx.dynamicanimation:dynamicanimation:$dynamicanimation_version"
+}
+```
+
+Le code suivant vous permettra d'animer votre objet (Remarque: en faisant varier les paramètres velocity, stiffness et damping ratio il est possible de calibrer le rebond de l'objet comme bon nous semble).
+```kotlin
+val springAnim = findViewById<View>(R.id.viewSpringAnimation).let { img ->
+    val springAnim = findViewById<View>(R.id.viewSpringAnimation).let { img ->
+        SpringAnimation(img, DynamicAnimation.TRANSLATION_Y, 0f).apply {
+            setStartVelocity(2500.0F)
+            spring.stiffness = SpringForce.STIFFNESS_VERY_LOW
+            spring.dampingRatio = SpringForce.DAMPING_RATIO_HIGH_BOUNCY
+        }
+    }
+    springAnim.start()
+```
 
 ## Configuration
 ### Keystores:
