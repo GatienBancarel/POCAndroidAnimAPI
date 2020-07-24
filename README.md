@@ -2,7 +2,10 @@
 
 Dans ce projet j'explore plusieurs API d'animations.
 
-## Installation
+## Home Page
+
+<img src="app/src/main/res/drawable-v24/screenshot/110819196_316542972863257_8971258900736702698_n.jpg"/>
+
 Clone this repository and import into **Android Studio**
 ```bash
 git clone git@github.com:wolox/<reponame>.git
